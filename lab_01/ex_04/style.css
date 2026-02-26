@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #999;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.form-row label {
+  width: 150px;
+  font-weight: bold;
+  font-size: 13px;
+  padding-top: 4px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select,
+.form-row .input-data {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #7e7e7e;
+  font-size: 13px;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 13px;
+}
+.radio-group label,
+.checkbox-group label {
+  font-weight: normal;
+  width: auto;
+}
+
+.rich-text-editor {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.rich-text-editor .toolbar {
+  background-color: #eee;
+  padding: 3px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.rich-text-editor textarea {
+  width: 98%;
+  border: none;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Phần Captcha */
+.captcha-box {
+  flex: 1;
+}
+.captcha-text {
+  font-family: monospace;
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Footer Buttons */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.action-buttons button {
+  padding: 5px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-submit {
+  background-color: #333;
+  margin-right: 5px;
+}
+
+.btn-cancel {
+  background-color: #555;
+}
