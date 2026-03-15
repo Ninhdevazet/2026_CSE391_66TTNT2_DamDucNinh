@@ -1,0 +1,20 @@
+#scoreInput {
+  width: 120px;
+}
+
+/* Kẻ khung cơ bản cho bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.row-weak {
+  background-color: yellow;
+}

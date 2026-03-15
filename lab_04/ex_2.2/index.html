@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt hàng trực tuyến</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="successMessage" class="hidden">Đặt hàng thành công! 🎉</div>
+
+    <div id="confirmDialog" class="hidden">
+      <h3>Xác nhận đặt hàng?</h3>
+      <p>Sản phẩm: <span id="summaryProduct"></span></p>
+      <p>Số lượng: <span id="summaryQuantity"></span></p>
+      <p>Tổng tiền: <span id="summaryTotal"></span> đ</p>
+      <p>Ngày giao: <span id="summaryDate"></span></p>
+      <button id="btnConfirm">Xác nhận</button>
+      <button id="btnCancel">Hủy</button>
+    </div>
+
+    <form id="orderForm">
+      <div class="form-group">
+        <label>Tên sản phẩm:</label><br />
+        <select id="product">
+          <option value="">-- Chọn sản phẩm --</option>
+          <option value="Áo thun">Áo thun - 150.000đ</option>
+          <option value="Quần jean">Quần jean - 300.000đ</option>
+          <option value="Giày sneaker">Giày sneaker - 500.000đ</option>
+        </select>
+        <div id="productError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Số lượng (1-99):</label><br />
+        <input type="number" id="quantity" min="1" max="99" />
+        <div id="quantityError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Ngày giao hàng:</label><br />
+        <input type="date" id="deliveryDate" />
+        <div id="deliveryDateError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Địa chỉ giao hàng:</label><br />
+        <input type="text" id="address" />
+        <div id="addressError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Ghi chú:</label><br />
+        <textarea id="notes" rows="3" cols="30"></textarea><br />
+        <span id="charCount">0/200</span>
+        <div id="notesError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Phương thức thanh toán:</label><br />
+        <input type="radio" name="payment" value="COD" /> COD
+        <input type="radio" name="payment" value="Chuyển khoản" /> Chuyển khoản
+        <input type="radio" name="payment" value="Ví điện tử" /> Ví điện tử
+        <div id="paymentError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <strong>Tổng tiền: <span id="totalPrice">0</span> đ</strong>
+      </div>
+
+      <button type="submit">Tiếp tục</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

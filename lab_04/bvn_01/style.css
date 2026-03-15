@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  min-height: 15px;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+#successMessage {
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pw-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#togglePw {
+  margin-left: 5px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 2px 8px;
+}
+
+.strength-bar-container {
+  width: 160px;
+  height: 6px;
+  background-color: #eee;
+  margin-top: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#strengthBar {
+  height: 100%;
+  width: 0;
+  transition:
+    width 0.3s,
+    background-color 0.3s;
+}
+
+#strengthText {
+  font-size: 12px;
+  margin-top: 3px;
+  font-weight: bold;
+}
+
+#nameCount {
+  font-size: 13px;
+  margin-left: 5px;
+  color: #666;
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký nhiều bước</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3 id="progressText">Bước 1 / 3</h3>
+
+    <div id="successMessage" class="hidden">Đăng ký thành công! 🎉</div>
+
+    <form id="multiForm">
+      <div id="step1">
+        <div class="form-group">
+          <label>Họ và tên:</label><br />
+          <input type="text" id="fullname" />
+          <div id="fullnameError" class="error"></div>
+        </div>
+        <div class="form-group">
+          <label>Ngày sinh:</label><br />
+          <input type="date" id="dob" />
+          <div id="dobError" class="error"></div>
+        </div>
+        <div class="form-group">
+          <label>Giới tính:</label><br />
+          <input type="radio" name="gender" value="Nam" /> Nam
+          <input type="radio" name="gender" value="Nữ" /> Nữ
+          <div id="genderError" class="error"></div>
+        </div>
+      </div>
+
+      <div id="step2" class="hidden">
+        <div class="form-group">
+          <label>Email:</label><br />
+          <input type="text" id="email" />
+          <div id="emailError" class="error"></div>
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu:</label><br />
+          <input type="password" id="password" />
+          <div id="passwordError" class="error"></div>
+        </div>
+        <div class="form-group">
+          <label>Xác nhận mật khẩu:</label><br />
+          <input type="password" id="confirmPassword" />
+          <div id="confirmPasswordError" class="error"></div>
+        </div>
+      </div>
+
+      <div id="step3" class="hidden">
+        <h4>Xác nhận thông tin:</h4>
+        <p><strong>Họ tên:</strong> <span id="sumName"></span></p>
+        <p><strong>Ngày sinh:</strong> <span id="sumDob"></span></p>
+        <p><strong>Giới tính:</strong> <span id="sumGender"></span></p>
+        <p><strong>Email:</strong> <span id="sumEmail"></span></p>
+      </div>
+
+      <br />
+      <button type="button" id="btnPrev" class="hidden">Quay lại</button>
+      <button type="button" id="btnNext">Tiếp theo</button>
+      <button type="submit" id="btnSubmit" class="hidden">Xác nhận</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
